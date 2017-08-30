@@ -12,6 +12,7 @@ public class KitchenView extends RoomView {
 	private JTextField extractorHoodSwitchedOnField;
 	private JTextField refrigeratorTemperatureField;
 	private JTextField freezerTempratureField;
+	private JTextField deuren;
 	
 	public KitchenView(Kitchen kitchen) {
 		super(kitchen);
@@ -24,6 +25,7 @@ public class KitchenView extends RoomView {
 		extractorHoodSwitchedOnField = addLabelAndTextField("extractor hood switched on?");
 		refrigeratorTemperatureField = addLabelAndTextField("refrigerator temperature");
 		freezerTempratureField = addLabelAndTextField("freezer temperature");
+		
 	}
 	
 	@Override
@@ -33,7 +35,8 @@ public class KitchenView extends RoomView {
 		setTextField(cooktopSwitchedOnField,kitchen.isCooktopSwitchedOn());
 		setTextField(extractorHoodSwitchedOnField,kitchen.isExtractorHoodSwitchedOn());	
 		setTextField(refrigeratorTemperatureField,kitchen.getRefrigeratorTemperature());
-		setTextField(freezerTempratureField,kitchen.getFreezerTemprature());		
+		setTextField(freezerTempratureField,kitchen.getFreezerTemprature());
+		
 	}
 	
 }
